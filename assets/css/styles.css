@@ -5,7 +5,23 @@ body {
 #header {
 	background:#71236b;
 	width:100%;
+	position:fixed;
+	z-index:2;
 }
+.logo {
+	padding-top:1em;
+	margin:0 auto;
+	padding-left:2em;
+	padding-bottom:1em;
+}
+.logo img {
+	width:100px;
+}
+.headline {
+	margin-top:8em;
+
+}
+/*Typography*/
 h1 {
 	font-family:"Pacifico", cursive;
 	font-size:70px;
@@ -23,14 +39,21 @@ h2 {
 	color: #88bbb9;
 	text-shadow:0.5px 0px grey;
 }
-.logo {
-	padding-top:1em;
-	margin:0 auto;
-	padding-left:2em;
-	padding-bottom:2em;
+h3 {
+	font-size:23px;
+	font-weight:600;
 }
-.logo img {
-	width:100px;
+h4 {
+	font-size:18px;
+}
+p {
+	line-height:30px;
+}
+br {
+	line-height:40px;
+}
+strong {
+	color:#00b1a9;
 }
 /*Button*/
 #cta {
@@ -38,12 +61,12 @@ h2 {
 	background:#00b1a9;
 	border:#00b1a9;
 	box-shadow:1px 1px #3be2da;
-	margin-top:15em;
+	margin-top:20em;
 	position:absolute;
 	right:20px;
 	border-radius:0;
-	padding:0.7em 1.5em;
-	font-size:16px;
+	padding:0.7em 1em;
+	font-size:15px;
 }
 #more, #do, #learn {
 	color:white;
@@ -52,6 +75,9 @@ h2 {
 	box-shadow:1px 1px #3be2da;
 	margin-top:3em;
 	margin-bottom:2em;
+}
+#do {
+	margin-top:1em;
 }
 #learn a{
 	color:white;
@@ -63,23 +89,54 @@ h2 {
 	position:fixed;
 	left:-300px;
 	bottom:0;
+	z-index:-2;
+}
+#donate {
+	background:red;
+	border-radius:0;
+	border:none;
+	margin:2em 0.5em 0 0.5em;
+}
+#donate a {
+	padding-right:1em;
+	padding-left:1em;
+	color:white;
+	text-decoration:none;
+}
+#findout a {
+	color:white;
+	text-decoration:none;
+}
+#findout {
+	background: #00b1a9;
+	color:white;
+	border-radius:0;
+	border:none;
+	margin:2em 0.5em 0 0.5em;
 }
 /*CONTENT*/
 #content {
-	background:rgba(255,255,255,0.5);
+	background:rgba(255,255,255,0.9);
 	display:none;
 	max-width:500px;
 	border-radius:0.5em;
-	margin-top:3em;
+	margin-top:10em;
+	height:80vh;
 }
 #content p {
 	font-size:20px;
+}
+#what, #who, #how {
+	padding-top:1em;
 }
 #who {
 	display:none;
 }
 #how {
 	display:none;
+}
+#how p {
+	padding-top:2em;
 }
 /*GRAPHS*/
 .surgery, .eatingdisorders {
@@ -115,10 +172,10 @@ h2 {
 	width:20%;
 }
 .minor span {
-	width:70%;
+	width:60%;
 }
 .older span{
-	width:2%;
+	width:1%;
 }
 /*FOOTER*/
 .footer {
@@ -143,11 +200,12 @@ h2 {
 	}
 }
 @media screen and (min-width:550px) {
+	h1 {
+		font-size:100px;
+	}
 	.headline {
- 		font-size:100px;
- 		padding-top:200px;
-
- 	}
+		margin-top:18em;
+	}
  	#content { 
  		position:relative;
  		height:600px;
@@ -155,17 +213,16 @@ h2 {
  	#content .btn {
  		position:absolute;
  		right:30px;
- 		bottom:70px;
  	}
-
+ 	#cta {
+ 		margin-top:15em;
+ 		padding:0.7 1.5em;
+ 		font-size:16px;
+ 	}
 }
 @media screen and (min-width:768px) {
 	#header .logo {
 		padding-left:8em;
-	}
-	h1 {
-		font-size:100px;
-
 	}
 	#content{
 		margin-left:20em;
@@ -174,7 +231,7 @@ h2 {
 }
 @media screen and (min-width:992px) {
 	#Layer_1 {
-		left:-150px;
+		left:-200px;
 	}
 	h1 {
 		font-size:120px;
@@ -185,9 +242,6 @@ h2 {
 	}
 	#header .logo {
 		padding-left:15em;
-	}
-	#header .logo img {
-		width:150px;
 	}
 	#content {
 		margin-left:35em;
@@ -201,22 +255,5 @@ h2 {
 @media screen and (min-width:1400px) {
 	#Layer_1 {
 		left:20px;
-	}
-	.navbar-toggle {
-		right:400px;
-	}
-	h1 {
-		font-size:150px;
-	}
-	h2 {
-		font-size:25px;
-		right:100px;
-	}
-	#cta {
-		margin-top:20em;
-		right:40px;
-	}
-	#header .logo {
-		padding-left:28em;
 	}
 }
